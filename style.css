@@ -3,17 +3,36 @@
  padding: 0;
  box-sizing: border-box;
 }
+
+:root{
+ --card-border-color: #f7dd43;
+ --card-title-date:#dad6c1;
+ --bg: url(./assets/bg-yellow.svg);
+}
 ul {
  list-style: none;
 }
 
-body {
- background-color: #121214;
- background-image: url(./assets/bg.svg);
- background-position-x: center;
- background-position-y: 55.6%;
- font-family: "Roboto", sans-serif;
+body.green{
+--bg:url(./assets/bg-green.svg);
+--card-border-color: #0bc70b;
 }
+
+body.blue{
+--bg:url(./assets/bg-blue.svg);
+--card-border-color: #1e1be6;
+}
+
+body {
+ background-image: var(--bg);
+ background-color: #121214;
+ background-position:center;
+ background-repeat: no-repeat;
+ background-size: cover;
+ font-family: "Roboto", sans-serif;
+
+}
+
 
 #app {
  width: fit-content;
@@ -21,7 +40,7 @@ body {
 }
 
 header {
- margin-bottom: 4rem;
+ padding-bottom: 4rem;
 }
 
 #cards{
@@ -33,9 +52,10 @@ header {
 .card {
  text-align: center;
  padding: 2rem 1rem;
- border-bottom: 3px solid #f7dd43;
+ border-bottom: 3px solid var(--card-border-color);
  border-radius: 6px;
  background-color: #1d1c19;
+ box-shadow: 2px 4px 10px #00000075;
 }
 
 .card h2 {
@@ -44,12 +64,12 @@ header {
  justify-content: center;
  gap: 16px;
  padding: 8px 16px;
- border: 1px solid #746615;
+ border: 1px solid var(--card-border-color);
  border-radius: 6px;
  width: fit-content;
  margin: auto;
  margin-bottom: 1.5rem;
- color: #746615;
+ color: var(--card-title-date);
 }
 
 .card h2 span {
