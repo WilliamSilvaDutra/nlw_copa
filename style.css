@@ -129,12 +129,13 @@ header {
  }
 }
 
-@media (min-width:1200px){
+@media (min-width:1000px){
  #cards{
-  max-width: 1000px ;
+  max-width: 920px ;
   flex-direction: row;
   flex-wrap: wrap;
-  gap:2rem;
+  gap:6rem;
+ 
   
  }
 }
