@@ -45,6 +45,7 @@ header {
 
 #cards{
  display: flex;
+ justify-content: center;
  flex-direction: column;
  gap: 2rem;
 }
@@ -52,10 +53,11 @@ header {
 .card {
  text-align: center;
  padding: 2rem 1rem;
- border-bottom: 3px solid var(--card-border-color);
+ border: 1px solid var(--card-border-color);
+ border-bottom: 4px solid var(--card-border-color);
  border-radius: 6px;
  background-color: #1d1c19;
- box-shadow: 2px 4px 10px #00000075;
+ box-shadow: 2px 4px 16px #00000075;
 }
 
 .card h2 {
@@ -131,11 +133,14 @@ header {
 
 @media (min-width:1000px){
  #cards{
-  max-width: 920px ;
+  max-width: 980px;
   flex-direction: row;
   flex-wrap: wrap;
-  gap:6rem;
- 
-  
+  gap:10px;
+
+ }
+
+ .card ul li strong {
+  font-size: 1.2rem;
  }
 }
