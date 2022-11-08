@@ -7,10 +7,10 @@ function createGame(player1, hour, player2){
     </li>
  `
 }
-let appear = -0.5
+let appear = -0.2
 
 function createCard(date, day, games) {
-appear = appear + 0.5
+appear = appear + 0.2
  return `
    <div class="card" style = "animation: appear ${appear}s">
        <h2>${date} <span>${day}</span></h2>
